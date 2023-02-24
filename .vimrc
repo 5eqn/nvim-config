@@ -31,7 +31,6 @@ au FileType markdown nnoremap <C-s> <Plug>MarkdownPreview
 au FileType * nnoremap <Space>r :RunCode<CR>
 au FileType dart nnoremap <Space>r :CocCommand flutter.run<CR>
 au FileType dart nnoremap <Space>d :CocList FlutterDevices<CR>
-au FileType rust nnoremap <Space>r :bot 8new<CR>:terminal cd `git rev-parse --show-toplevel` && cargo run<CR>:norm G<CR>
 
 let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'}
 let g:vimtex_compiler_latexrun_engines ={'_':'xelatex'}

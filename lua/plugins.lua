@@ -15,6 +15,7 @@ return require("packer").startup(function()
   use("vim-airline/vim-airline")
   use("vim-airline/vim-airline-themes")
   use { 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use { 'ThePrimeagen/harpoon', requires = 'nvim-lua/plenary.nvim' }
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     requires = { { 'nvim-lua/plenary.nvim' } }

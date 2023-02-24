@@ -122,14 +122,14 @@ keyset("n", "<leader>cl", "<Plug>(coc-codelens-action)", opts)
 
 -- Map function and class text objects
 -- NOTE: Requires 'textDocument.documentSymbol' support from the language server
-keyset("x", "if", "<Plug>(coc-funcobj-i)", opts)
-keyset("o", "if", "<Plug>(coc-funcobj-i)", opts)
-keyset("x", "af", "<Plug>(coc-funcobj-a)", opts)
-keyset("o", "af", "<Plug>(coc-funcobj-a)", opts)
-keyset("x", "ic", "<Plug>(coc-classobj-i)", opts)
-keyset("o", "ic", "<Plug>(coc-classobj-i)", opts)
-keyset("x", "ac", "<Plug>(coc-classobj-a)", opts)
-keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
+-- keyset("x", "if", "<Plug>(coc-funcobj-i)", opts)
+-- keyset("o", "if", "<Plug>(coc-funcobj-i)", opts)
+-- keyset("x", "af", "<Plug>(coc-funcobj-a)", opts)
+-- keyset("o", "af", "<Plug>(coc-funcobj-a)", opts)
+-- keyset("x", "ic", "<Plug>(coc-classobj-i)", opts)
+-- keyset("o", "ic", "<Plug>(coc-classobj-i)", opts)
+-- keyset("x", "ac", "<Plug>(coc-classobj-a)", opts)
+-- keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
 
 
 -- Remap <C-f> and <C-b> to scroll float windows/popups
@@ -147,8 +147,8 @@ keyset("v", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', o
 
 -- Use CTRL-S for selections ranges
 -- Requires 'textDocument/selectionRange' support of language server
-keyset("n", "<C-s>", "<Plug>(coc-range-select)", { silent = true })
-keyset("x", "<C-s>", "<Plug>(coc-range-select)", { silent = true })
+-- keyset("n", "<C-s>", "<Plug>(coc-range-select)", { silent = true })
+-- keyset("x", "<C-s>", "<Plug>(coc-range-select)", { silent = true })
 
 
 -- Add `:Format` command to format current buffer
@@ -180,8 +180,8 @@ keyset("n", "<space>o", ":<C-u>CocList outline<cr>", opts)
 -- Search workspace symbols
 keyset("n", "<space>s", ":<C-u>CocList -I symbols<cr>", opts)
 -- Do default action for next item
-keyset("n", "<space>j", ":<C-u>CocNext<cr>", opts)
+-- keyset("n", "<space>j", ":<C-u>CocNext<cr>", opts)
 -- Do default action for previous item
-keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
+-- keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 -- Resume latest coc list
-keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
+-- keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)

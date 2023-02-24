@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/code_runner.nvim",
     url = "https://github.com/CRAG666/code_runner.nvim"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/seqn/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["kotlin-vim"] = {
     loaded = true,
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/kotlin-vim",

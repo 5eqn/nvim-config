@@ -4,19 +4,8 @@
   "coc.source.around.enable": false,
   "coc.source.buffer.enable": false,
   "python.formatting.provider": "black",
-  "rust-analyzer.procMacro.enable": false,
+  "rust-analyzer.procMacro.enable": true,
   "languageserver": {
-    "rust-analyzer": {
-      "command": "rust-analyzer",
-      "rootPatterns": ["Cargo.toml", "rust-project.json"],
-      "filetypes": ["rust"],
-      "initializationOptions": {
-        "workspace": {
-          "updatableDependencies": true,
-          "buildOnStartup": true
-        }
-      }
-    },
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],

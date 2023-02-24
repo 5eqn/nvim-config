@@ -1,9 +1,6 @@
 require("plugins")
 require("coc")
 
--- follow link
-vim.keymap.set("n", "gx", [[:silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<CR>]], opts)
-
 -- integrate with vimrc
 local vimrc = vim.fn.stdpath("config") .. "/.vimrc"
 vim.cmd.source(vimrc)
@@ -22,7 +19,7 @@ require('code_runner').setup({
     kotlin = "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
     python = "python3 -u",
     typescript = "deno run",
-    rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
+    rust = "cargo run",
     cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt"
   },
 })
@@ -42,3 +39,9 @@ vim.keymap.set('n', '<Space>/f', builtin.find_files, {})
 vim.keymap.set('n', '<Space>/g', builtin.live_grep, {})
 vim.keymap.set('n', '<Space>/b', builtin.buffers, {})
 vim.keymap.set('n', '<Space>/h', builtin.help_tags, {})
+
+-- harpoon
+local function term()
+  require("harpoon.term").gotoTerminal(1)
+end
+vim.keymap.set('n', '<Space>t', term, {})
