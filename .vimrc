@@ -53,6 +53,10 @@ nmap \/ :noh<Enter>
 nmap <Space>f :NvimTreeToggle<Enter>
 nmap <Space>- :NvimTreeCollapse<Enter>
 
+" add some terminal commands
+tmap <C-[> <C-\><C-N>
+tmap <C-]> <C-\><C-N>:q<CR>
+
 " nmap <silent> <C-c> <Plug>(coc-cursors-position)
 " nmap <silent> <C-d> <Plug>(coc-cursors-word)
 " xmap <silent> <C-d> <Plug>(coc-cursors-range)
