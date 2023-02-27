@@ -1,16 +1,19 @@
 require("plugins")
 require("coc")
+require("line")
 
 -- integrate with vimrc
 local vimrc = vim.fn.stdpath("config") .. "/.vimrc"
 vim.cmd.source(vimrc)
 
+-- treesitter
 require("nvim-treesitter.configs").setup({
   highlight = {
     enable = true,
   },
 })
 
+-- code runner
 require('code_runner').setup({
   -- put here the commands by filetype
   filetype = {
@@ -24,13 +27,9 @@ require('code_runner').setup({
   },
 })
 
--- nvim tree
-
--- disable netrw at the very start of your init.lua (strongly advised)
+-- nvim-tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
--- empty setup using defaults
 require("nvim-tree").setup()
 
 -- telescope
