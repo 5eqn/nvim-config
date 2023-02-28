@@ -19,10 +19,10 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = { 'mode' },
-    lualine_b = { 'branch', 'diff', 'diagnostics' },
-    lualine_c = { 'filename' },
-    lualine_x = { 'encoding', 'fileformat', 'filetype' },
-    lualine_y = { 'progress' },
+    lualine_b = { 'branch', 'diff' },
+    lualine_c = { 'diagnostics' },
+    lualine_x = { '%{coc#status()}', 'progress' },
+    lualine_y = { 'aerial' },
     lualine_z = { 'location' }
   },
   inactive_sections = {
@@ -36,5 +36,4 @@ require('lualine').setup {
   tabline = {},
   winbar = {},
   inactive_winbar = {},
-  extensions = {}
 }
