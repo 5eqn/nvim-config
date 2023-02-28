@@ -170,7 +170,7 @@ vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'edito
 ---@diagnostic disable-next-line: redefined-local
 local opts = { silent = true, nowait = true }
 -- Show all diagnostics
-keyset("n", "<space>a", ":<C-u>CocList diagnostics<cr>", opts)
+keyset("n", "<space>d", ":<C-u>CocList diagnostics<cr>", opts)
 -- Manage extensions
 keyset("n", "<space>e", ":<C-u>CocList extensions<cr>", opts)
 -- Show commands

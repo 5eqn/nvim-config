@@ -11,6 +11,7 @@ hi Conceal ctermbg=none
 hi MatchParen ctermbg=Red
 hi LineNrAbove ctermfg=DarkGray
 hi LineNrBelow ctermfg=DarkGray
+hi CocInlayHint ctermfg=DarkGray ctermbg=none
 
 set relativenumber
 set number
@@ -54,6 +55,7 @@ let g:UltiSnipsExpandTrigger = '<F1>'
 let g:UltiSnipsJumpForwardTrigger = '<F2>'
 let g:UltiSnipsJumpBackwardTrigger = '<F3>'
 
+" Convenient commands
 nnoremap <C-w><C-y> <C-w><C-w>vG$y<C-w><C-w>
 nnoremap \/ :noh<Enter>
 
