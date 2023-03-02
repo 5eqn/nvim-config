@@ -55,6 +55,10 @@ let g:UltiSnipsExpandTrigger = '<F1>'
 let g:UltiSnipsJumpForwardTrigger = '<F2>'
 let g:UltiSnipsJumpBackwardTrigger = '<F3>'
 
+" Copilot
+imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
 " Convenient commands
 nnoremap <C-w><C-y> <C-w><C-w>vG$y<C-w><C-w>
 nnoremap \/ :noh<Enter>

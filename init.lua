@@ -1,10 +1,14 @@
 require("plugins")
 require("line")
 require("coc")
+require("tree")
 
 -- integrate with vimrc
 local vimrc = vim.fn.stdpath("config") .. "/.vimrc"
 vim.cmd.source(vimrc)
+
+-- note manager
+require('nothura')
 
 -- treesitter
 require("nvim-treesitter.configs").setup({
@@ -23,18 +27,14 @@ require('code_runner').setup({
   filetype = {
     haskell = "ghc -dynamic $fileName && $dir/$fileNameWithoutExt",
     java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    kotlin = "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+    kotlin =
+    "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
     python = "python3 -u",
     typescript = "deno run",
     rust = "cargo run",
     cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt"
   },
 })
-
--- nvim-tree
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-require("nvim-tree").setup()
 
 -- telescope
 local function telescope()
@@ -51,8 +51,8 @@ require('telescope').setup({
     aerial = {
       -- Display symbols as <root>.<parent>.<symbol>
       show_nesting = {
-        ['_'] = false, -- This key will be the default
-        json = true, -- You can set the option for specific filetypes
+            ['_'] = false, -- This key will be the default
+        json = true,       -- You can set the option for specific filetypes
         yaml = true,
       }
     }

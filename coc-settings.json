@@ -1,5 +1,7 @@
 {
   "Lua.telemetry.enable": true,
+  "Lua.diagnostics.globals": ["use"],
+  "sumneko-lua.enableNvimLuaDev": true,
   "coc.preferences.formatOnSave": true,
   "coc.source.around.enable": false,
   "coc.source.buffer.enable": false,

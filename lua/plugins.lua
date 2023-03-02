@@ -1,4 +1,10 @@
 return require("packer").startup(function()
+  -- note manager
+  use {
+    '5eqn/nothura.nvim',
+    requires = 'stevearc/aerial.nvim'
+  }
+
   -- code outline
   use {
     'stevearc/aerial.nvim',
