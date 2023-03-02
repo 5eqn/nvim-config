@@ -105,6 +105,11 @@ _G.packer_plugins = {
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["nothura.nvim"] = {
+    loaded = true,
+    path = "/home/seqn/.local/share/nvim/site/pack/packer/start/nothura.nvim",
+    url = "https://github.com/5eqn/nothura.nvim"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",

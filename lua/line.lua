@@ -22,7 +22,10 @@ require('lualine').setup {
     lualine_b = { 'branch', 'diff' },
     lualine_c = { 'diagnostics' },
     lualine_x = { '%{coc#status()}', 'progress' },
-    lualine_y = { 'aerial' },
+    lualine_y = { { "aerial",
+      sep = '',
+      depth = -1,
+    } },
     lualine_z = { 'location' }
   },
   inactive_sections = {
