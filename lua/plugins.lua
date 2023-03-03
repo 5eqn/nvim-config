@@ -3,6 +3,10 @@ return require("packer").startup(function()
   use 'godlygeek/tabular'
   use 'preservim/vim-markdown'
 
+  -- starup time optimise
+  use 'dstein64/vim-startuptime'
+  use 'lewis6991/impatient.nvim'
+
   -- note manager
   use {
     '~/web/nothura.nvim',
@@ -29,8 +33,23 @@ return require("packer").startup(function()
   -- auto complete
   use("github/copilot.vim")
 
+  -- surround
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  })
+
   -- syntax highlight
-  use("nvim-treesitter/nvim-treesitter")
+  use({
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    after = "nvim-treesitter",
+    requires = "nvim-treesitter/nvim-treesitter",
+  })
 
   -- latex support
   use("lervag/vimtex")
