@@ -12,6 +12,7 @@ hi MatchParen ctermbg=Red
 hi LineNrAbove ctermfg=DarkGray
 hi LineNrBelow ctermfg=DarkGray
 hi CocInlayHint ctermfg=DarkGray ctermbg=none
+hi NormalFloat guibg=none guifg=none
 
 set relativenumber
 set number
@@ -28,9 +29,6 @@ set maxmempattern=8192
 set signcolumn=no
 
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-au FileType c,cpp nnoremap <BS> ^i/* REQUIRED */ <ESC>
-au FileType markdown nnoremap <BS> $a~~<ESC>^i~~<ESC>
-au FileType markdown nnoremap <C-s> <Plug>MarkdownPreview
 au FileType * nnoremap <Space>r :RunCode<CR>
 au FileType dart nnoremap <Space>r :CocCommand flutter.run<CR>
 au FileType dart nnoremap <Space>d :CocList FlutterDevices<CR>
@@ -50,9 +48,13 @@ let g:vimtex_mappings_disable = {
       \ 'i': [']]'],
       \}
 
+" Vim Markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_math = 1
+
 " UltiSnips
 let g:UltiSnipsExpandTrigger = '<F1>'
-let g:UltiSnipsJumpForwardTrigger = '<F2>'
+let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<F3>'
 
 " Copilot
