@@ -108,7 +108,7 @@ _G.packer_plugins = {
   ["nothura.nvim"] = {
     loaded = true,
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/nothura.nvim",
-    url = "https://github.com/5eqn/nothura.nvim"
+    url = "/home/seqn/web/nothura.nvim"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -135,6 +135,11 @@ _G.packer_plugins = {
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  tabular = {
+    loaded = true,
+    path = "/home/seqn/.local/share/nvim/site/pack/packer/start/tabular",
+    url = "https://github.com/godlygeek/tabular"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -149,6 +154,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
+  },
+  ["vim-markdown"] = {
+    loaded = true,
+    path = "/home/seqn/.local/share/nvim/site/pack/packer/start/vim-markdown",
+    url = "https://github.com/preservim/vim-markdown"
   },
   vimtex = {
     loaded = true,

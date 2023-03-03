@@ -9,6 +9,7 @@ vim.cmd.source(vimrc)
 
 -- note manager
 require('nothura')
+vim.keymap.set('n', ',n', ':lua GotoZathura()<CR>', { noremap = true, silent = true })
 
 -- treesitter
 require("nvim-treesitter.configs").setup({
@@ -47,6 +48,11 @@ vim.keymap.set('n', '<Space>g', builtin.live_grep, {})
 vim.keymap.set('n', '<Space>b', builtin.buffers, {})
 vim.keymap.set('n', '<Space>h', builtin.help_tags, {})
 require('telescope').setup({
+  pickers = {
+    find_files = {
+      hidden = true,
+    }
+  },
   extensions = {
     aerial = {
       -- Display symbols as <root>.<parent>.<symbol>

@@ -1,7 +1,11 @@
 return require("packer").startup(function()
+  -- markdown
+  use 'godlygeek/tabular'
+  use 'preservim/vim-markdown'
+
   -- note manager
   use {
-    '5eqn/nothura.nvim',
+    '~/web/nothura.nvim',
     requires = 'stevearc/aerial.nvim'
   }
 
