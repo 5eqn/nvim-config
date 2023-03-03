@@ -66,7 +66,7 @@ nnoremap <C-w><C-y> <C-w><C-w>vG$y<C-w><C-w>
 nnoremap \/ :noh<Enter>
 
 " NvimTree
-nnoremap <Space>f :NvimTreeToggle<Enter>
+nnoremap <Space>/ :NvimTreeToggle<Enter>
 nnoremap <Space>- :NvimTreeCollapse<Enter>
 
 " Terminal commands
