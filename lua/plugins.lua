@@ -1,4 +1,8 @@
 return require("packer").startup(function()
+  -- better movement
+  use 'ggandor/leap.nvim'
+  use 'tpope/vim-repeat'
+
   -- markdown
   use 'godlygeek/tabular'
   use 'preservim/vim-markdown'
