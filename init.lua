@@ -8,6 +8,10 @@ require('impatient')
 local vimrc = vim.fn.stdpath("config") .. "/.vimrc"
 vim.cmd.source(vimrc)
 
+-- leap movement
+vim.keymap.set('n', 'z', '<Plug>(leap-forward-to)', { noremap = true })
+vim.keymap.set('n', 'Z', '<Plug>(leap-backward-to)', { noremap = true })
+
 -- note manager
 require('nothura')
 vim.keymap.set('n', ',n', ':lua GotoZathura()<CR>', { noremap = true, silent = true })
@@ -58,8 +62,8 @@ require('telescope').setup({
     aerial = {
       -- Display symbols as <root>.<parent>.<symbol>
       show_nesting = {
-            ['_'] = false, -- This key will be the default
-        json = true,       -- You can set the option for specific filetypes
+        ['_'] = false, -- This key will be the default
+        json = true,   -- You can set the option for specific filetypes
         yaml = true,
       }
     }
