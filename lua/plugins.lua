@@ -1,8 +1,16 @@
 return require("packer").startup(function()
+  -- file icon
+  use 'nvim-tree/nvim-web-devicons'
+
+  -- file manager
+  use {
+    'stevearc/oil.nvim',
+    config = function() require('oil').setup() end
+  }
+
   -- better movement
   use 'ggandor/leap.nvim'
   use 'tpope/vim-repeat'
-  use 'rhysd/clever-f.vim'
 
   -- markdown
   use 'godlygeek/tabular'
@@ -22,14 +30,6 @@ return require("packer").startup(function()
   use {
     'stevearc/aerial.nvim',
     config = function() require('aerial').setup() end
-  }
-
-  -- file manager
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons'
-    }
   }
 
   -- package manager
@@ -77,7 +77,7 @@ return require("packer").startup(function()
   -- file finder
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = { { 'nvim-lua/plenary.nvim' } }
+    requires = { 'nvim-lua/plenary.nvim' }
   }
 
   -- status line
