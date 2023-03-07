@@ -1,7 +1,6 @@
 require("plugins")
 require("line")
 require("coc")
-require("tree")
 require('impatient')
 
 -- integrate with vimrc
@@ -9,8 +8,9 @@ local vimrc = vim.fn.stdpath("config") .. "/.vimrc"
 vim.cmd.source(vimrc)
 
 -- leap movement
-vim.keymap.set('n', 'z', '<Plug>(leap-forward-to)', { noremap = true })
-vim.keymap.set('n', 'Z', '<Plug>(leap-backward-to)', { noremap = true })
+vim.api.nvim_set_hl(0, 'Cursor', { reverse = true })
+vim.keymap.set({ 'n', 'v' }, 'f', '<Plug>(leap-forward-to)', { noremap = true })
+vim.keymap.set({ 'n', 'v' }, 'F', '<Plug>(leap-backward-to)', { noremap = true })
 
 -- note manager
 require('nothura')
@@ -44,7 +44,7 @@ require('code_runner').setup({
 
 -- telescope
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<Space>f', builtin.find_files, {})
+vim.keymap.set('n', '<Space>/', builtin.find_files, {})
 vim.keymap.set('n', '<Space>a', require("telescope").extensions.aerial.aerial, {})
 vim.keymap.set('n', '<Space>g', builtin.live_grep, {})
 vim.keymap.set('n', '<Space>b', builtin.buffers, {})
