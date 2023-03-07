@@ -7,7 +7,7 @@
   "coc.source.buffer.enable": false,
   "python.formatting.provider": "black",
   "rust-analyzer.procMacro.enable": false,
-  "rust-analyzer.diagnostics.disabled": ["unresolved-proc-macro"],
+  "rust-analyzer.diagnostics.enable": false,
   "languageserver": {
     "haskell": {
       "command": "haskell-language-server-wrapper",
@@ -20,7 +20,6 @@
         "hie.yaml"
       ],
       "filetypes": ["haskell", "lhaskell"],
-      // Settings are optional, here are some example values
       "settings": {
         "haskell": {
           "checkParents": "CheckOnSave",

@@ -2,6 +2,7 @@ return require("packer").startup(function()
   -- better movement
   use 'ggandor/leap.nvim'
   use 'tpope/vim-repeat'
+  use 'rhysd/clever-f.vim'
 
   -- markdown
   use 'godlygeek/tabular'
