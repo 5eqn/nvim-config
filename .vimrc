@@ -33,6 +33,9 @@ au FileType * nnoremap <Space>r :RunCode<CR>
 au FileType dart nnoremap <Space>r :CocCommand flutter.run<CR>
 au FileType dart nnoremap <Space>d :CocList FlutterDevices<CR>
 
+" Fcitx
+let g:fcitx5_remote='fcitx5-remote'
+
 " Airline
 let g:airline_theme="bubblegum"
 let g:airline_powerline_fonts = 1
@@ -66,12 +69,15 @@ nnoremap <C-w><C-y> <C-w><C-w>vG$y<C-w><C-w>
 nnoremap \/ :noh<Enter>
 
 " NvimTree
-nnoremap <Space>/ :NvimTreeToggle<Enter>
+nnoremap <Space>f :NvimTreeToggle<Enter>
 nnoremap <Space>- :NvimTreeCollapse<Enter>
 
 " Terminal commands
 tnoremap <C-[> <C-\><C-N>
 tnoremap <C-]> <C-\><C-N>:q<CR>
+
+" Markdown Preview
+nnoremap <C-s> <Plug>MarkdownPreview
 
 " nmap <silent> <C-c> <Plug>(coc-cursors-position)
 " nmap <silent> <C-d> <Plug>(coc-cursors-word)

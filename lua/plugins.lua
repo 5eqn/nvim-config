@@ -1,18 +1,26 @@
 return require("packer").startup(function()
+  -- fcitx
+  use 'lilydjwg/fcitx.vim'
+
   -- file icon
   use 'nvim-tree/nvim-web-devicons'
 
   -- file manager
   use {
-    'stevearc/oil.nvim',
+    '~/web/oil.nvim',
     config = function() require('oil').setup() end
   }
+  use 'nvim-tree/nvim-tree.lua'
 
   -- better movement
   use 'ggandor/leap.nvim'
   use 'tpope/vim-repeat'
 
   -- markdown
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
   use 'godlygeek/tabular'
   use 'preservim/vim-markdown'
 
