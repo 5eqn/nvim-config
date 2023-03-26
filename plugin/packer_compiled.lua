@@ -95,6 +95,11 @@ _G.packer_plugins = {
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["fcitx.vim"] = {
+    loaded = true,
+    path = "/home/seqn/.local/share/nvim/site/pack/packer/start/fcitx.vim",
+    url = "https://github.com/lilydjwg/fcitx.vim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/harpoon",
