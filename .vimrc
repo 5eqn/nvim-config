@@ -32,6 +32,9 @@ au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType * nnoremap <Space>r :RunCode<CR>
 au FileType dart nnoremap <Space>r :CocCommand flutter.run<CR>
 au FileType dart nnoremap <Space>d :CocList FlutterDevices<CR>
+au FileType java set shiftwidth=4
+au FileType java set tabstop=4
+au FileType java set softtabstop=4
 
 " Fcitx
 let g:fcitx5_remote='fcitx5-remote'
