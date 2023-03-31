@@ -13,6 +13,7 @@ hi LineNrAbove ctermfg=DarkGray
 hi LineNrBelow ctermfg=DarkGray
 hi CocInlayHint ctermfg=DarkGray ctermbg=none
 hi NormalFloat guibg=none guifg=none
+hi FloatBorder ctermfg=DarkGray
 
 set relativenumber
 set number
@@ -71,9 +72,10 @@ let g:copilot_no_tab_map = v:true
 nnoremap <C-w><C-y> <C-w><C-w>vG$y<C-w><C-w>
 nnoremap \/ :noh<Enter>
 
-" NvimTree
-nnoremap <Space>f :NvimTreeToggle<Enter>
-nnoremap <Space>- :NvimTreeCollapse<Enter>
+" Neo Tree
+let g:neo_tree_remove_legacy_commands = 1
+hi NeoTreeIndentMarker ctermfg=DarkGrey
+nnoremap <Space>f :Neotree position=float<Enter>
 
 " Terminal commands
 tnoremap <C-[> <C-\><C-N>
