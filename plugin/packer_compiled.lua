@@ -105,6 +105,11 @@ _G.packer_plugins = {
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
+  ["idris2-nvim"] = {
+    loaded = true,
+    path = "/home/seqn/.local/share/nvim/site/pack/packer/start/idris2-nvim",
+    url = "https://github.com/ShinKage/idris2-nvim"
+  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -120,10 +125,30 @@ _G.packer_plugins = {
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/seqn/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
+  ["neo-tree.nvim"] = {
+    loaded = true,
+    path = "/home/seqn/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
+    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
   ["nothura.nvim"] = {
     loaded = true,
     path = "/home/seqn/.local/share/nvim/site/pack/packer/start/nothura.nvim",
     url = "/home/seqn/web/nothura.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/seqn/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/seqn/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-surround"] = {
     config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0" },

@@ -1,16 +1,29 @@
 return require("packer").startup(function()
+  -- idris 2
+  use { 'ShinKage/idris2-nvim', requires = { 'neovim/nvim-lspconfig', 'MunifTanjim/nui.nvim' } }
+
   -- fcitx
   use 'lilydjwg/fcitx.vim'
 
   -- file icon
   use 'nvim-tree/nvim-web-devicons'
 
-  -- file manager
+  -- netrw replacement
   use {
     '~/web/oil.nvim',
     config = function() require('oil').setup() end
   }
-  use 'nvim-tree/nvim-tree.lua'
+
+  -- file tree
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  }
 
   -- better movement
   use 'ggandor/leap.nvim'

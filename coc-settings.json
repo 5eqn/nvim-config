@@ -9,6 +9,11 @@
   "rust-analyzer.procMacro.enable": false,
   "rust-analyzer.diagnostics.enable": false,
   "languageserver": {
+    "idris": {
+      "command": "idris2-lsp",
+      "rootPatterns": ["*.ipkg"],
+      "filetypes": ["idris2"]
+    },
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
