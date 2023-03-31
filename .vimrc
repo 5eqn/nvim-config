@@ -12,8 +12,7 @@ hi MatchParen ctermbg=Red
 hi LineNrAbove ctermfg=DarkGray
 hi LineNrBelow ctermfg=DarkGray
 hi CocInlayHint ctermfg=DarkGray ctermbg=none
-hi NormalFloat guibg=none guifg=none
-hi FloatBorder ctermfg=DarkGray
+hi NormalFloat guibg=DarkGray guifg=none
 
 set relativenumber
 set number

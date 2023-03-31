@@ -8,14 +8,6 @@ require("telescope-conf")
 require('impatient')
 require('vimrc')
 
--- idris2
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "idris2" },
-  callback = function()
-    require('idris2').setup({})
-  end
-})
-
 -- note manager
 require('nothura')
 vim.keymap.set('n', ',n', ':lua GotoZathura()<CR>', { noremap = true, silent = true })
