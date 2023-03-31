@@ -100,15 +100,15 @@ vim.api.nvim_create_autocmd("User", {
 -- Apply codeAction to the selected region
 -- Example: `<leader>aap` for current paragraph
 local opts2 = { silent = true, nowait = true }
-keyset("x", "<leader>a", "<Plug>(coc-codeaction-selected)", opts2)
-keyset("n", "<leader>a", "<Plug>(coc-codeaction-selected)", opts2)
+-- keyset("x", "<leader>a", "<Plug>(coc-codeaction-selected)", opts2)
+-- keyset("n", "<leader>a", "<Plug>(coc-codeaction-selected)", opts2)
 
 -- Remap keys for apply code actions at the cursor position.
-keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", opts2)
+keyset("n", "<leader>a", "<Plug>(coc-codeaction-cursor)", opts2)
 -- Remap keys for apply code actions affect whole buffer.
-keyset("n", "<leader>as", "<Plug>(coc-codeaction-source)", opts2)
+-- keyset("n", "<leader>as", "<Plug>(coc-codeaction-source)", opts2)
 -- Remap keys for applying codeActions to the current buffer
-keyset("n", "<leader>ax", "<Plug>(coc-codeaction)", opts2)
+-- keyset("n", "<leader>ax", "<Plug>(coc-codeaction)", opts2)
 -- Apply the most preferred quickfix action on the current line.
 keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", opts2)
 
