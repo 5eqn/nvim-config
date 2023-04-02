@@ -12,13 +12,6 @@ require('vimrc')
 require('nothura')
 vim.keymap.set('n', ',n', ':lua GotoZathura()<CR>', { noremap = true, silent = true })
 
--- treesitter
-require("nvim-treesitter.configs").setup({
-  highlight = {
-    enable = true,
-  },
-})
-
 -- aerial
 vim.keymap.set('n', '}', '<cmd>AerialNext<CR>')
 vim.keymap.set('n', '{', '<cmd>AerialPrev<CR>')

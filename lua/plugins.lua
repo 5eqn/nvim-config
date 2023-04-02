@@ -70,13 +70,6 @@ return require("packer").startup(function()
     end
   })
 
-  -- syntax highlight
-  use({
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    after = "nvim-treesitter",
-    requires = "nvim-treesitter/nvim-treesitter",
-  })
-
   -- latex support
   use("lervag/vimtex")
 

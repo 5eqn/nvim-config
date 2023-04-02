@@ -1,4 +1,5 @@
 {
+  "semanticTokens.enable": true,
   "Lua.telemetry.enable": true,
   "Lua.diagnostics.globals": ["use"],
   "sumneko-lua.enableNvimLuaDev": true,
