@@ -1,6 +1,6 @@
 return require("packer").startup(function()
-  -- idris 2
-  use { 'ShinKage/idris2-nvim', requires = { 'neovim/nvim-lspconfig', 'MunifTanjim/nui.nvim' } }
+  -- git blame
+  use 'f-person/git-blame.nvim'
 
   -- fcitx
   use 'lilydjwg/fcitx.vim'

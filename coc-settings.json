@@ -9,6 +9,8 @@
   "python.formatting.provider": "black",
   "rust-analyzer.procMacro.enable": false,
   "rust-analyzer.diagnostics.enable": false,
+  "java.jdt.ls.vmargs": "-noverify -Xmx6G -XX:+UseG1GC -XX:+UseStringDeduplication",
+  "java.import.gradle.java.home": "/usr/lib/jvm/java-11-openjdk",
   "languageserver": {
     "idris": {
       "command": "idris2-lsp",
@@ -38,6 +40,5 @@
         }
       }
     }
-  },
-  "java.import.gradle.java.home": "/usr/lib/jvm/java-11-openjdk"
+  }
 }
