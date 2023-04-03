@@ -4,7 +4,6 @@
 " syntax on
 
 filetype plugin indent on
-syntax on
 
 hi CocCursorRange ctermbg=Blue ctermfg=Black
 hi Conceal ctermbg=none
@@ -13,6 +12,12 @@ hi LineNrAbove ctermfg=DarkGray
 hi LineNrBelow ctermfg=DarkGray
 hi CocInlayHint ctermfg=DarkGray ctermbg=none
 hi NormalFloat guibg=DarkGray guifg=none
+hi Comment cterm=italic ctermfg=DarkGreen
+hi CocSemEnumMember ctermfg=LightBlue
+hi COcSemClass ctermfg=121
+hi Keyword cterm=none ctermfg=Yellow
+hi Function cterm=none
+hi Identifier cterm=none ctermfg=Gray
 
 set relativenumber
 set number
@@ -36,12 +41,18 @@ au FileType java set shiftwidth=4
 au FileType java set tabstop=4
 au FileType java set softtabstop=4
 
+" Semantic Highlighting
+let g:coc_default_semantic_highlight_groups = 1
+
 " Fcitx
 let g:fcitx5_remote='fcitx5-remote'
 
 " Airline
 let g:airline_theme="bubblegum"
 let g:airline_powerline_fonts = 1
+
+" Git Blame
+nnoremap <Space><CR> :GitBlameOpenCommitURL<CR>
 
 " Vimtex
 let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'}
