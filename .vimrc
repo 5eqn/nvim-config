@@ -1,19 +1,19 @@
-" filetype on
 " set autoindent
 " set cindent
 " syntax on
 
 filetype plugin indent on
 
-hi CocCursorRange ctermbg=Blue ctermfg=Black
 hi Conceal ctermbg=none
-hi MatchParen ctermbg=Red
-hi LineNrAbove ctermfg=DarkGray
-hi LineNrBelow ctermfg=DarkGray
-hi CocInlayHint ctermfg=DarkGray ctermbg=none
-hi NormalFloat guibg=DarkGray guifg=none
 
 " Color Scheme
+" hi NeoTreeNormal guifg=#a7aab0 guibg=#232326
+" hi NeoTreeNormalNC guifg=#a7aab0 guibg=#232326
+" hi NeoTreeEndOfBuffer guifg=#232326 guibg=#232326
+" hi MatchParen ctermbg=Red
+" hi LineNrAbove ctermfg=DarkGray
+" hi LineNrBelow ctermfg=DarkGray
+" hi NormalFloat guibg=DarkGray guifg=none
 " hi CocSemEnumMember ctermfg=LightBlue
 " hi CocSemClass ctermfg=121
 " hi CocSemModule ctermfg=121
@@ -47,15 +47,17 @@ au FileType java set shiftwidth=4
 au FileType java set tabstop=4
 au FileType java set softtabstop=4
 
-" Semantic Highlighting
-let g:coc_default_semantic_highlight_groups = 1
-
 " Fcitx
 let g:fcitx5_remote='fcitx5-remote'
 
 " Airline
 let g:airline_theme="bubblegum"
 let g:airline_powerline_fonts = 1
+
+" Git Diff
+nnoremap <Space>d :DiffviewOpen<CR>
+nnoremap <Space>h :DiffviewFileHistory<CR>
+nnoremap <Space>w :tabclose<CR>
 
 " Git Blame
 nnoremap <Space><CR> :GitBlameOpenCommitURL<CR>
@@ -86,8 +88,7 @@ nnoremap \/ :noh<Enter>
 
 " Neo Tree
 let g:neo_tree_remove_legacy_commands = 1
-hi NeoTreeIndentMarker ctermfg=DarkGrey
-nnoremap <Space>f :Neotree position=float<Enter>
+nnoremap <Space>f :Neotree float toggle<Enter>
 
 " Terminal commands
 tnoremap <C-[> <C-\><C-N>
@@ -97,7 +98,7 @@ tnoremap <C-]> <C-\><C-N>:q<CR>
 nnoremap <C-s> <Plug>MarkdownPreview
 
 " Select all
-nnoremap <C-a> 0ggvG
+nnoremap <C-a> 0ggvG$
 
 " nmap <silent> <C-c> <Plug>(coc-cursors-position)
 " nmap <silent> <C-d> <Plug>(coc-cursors-word)

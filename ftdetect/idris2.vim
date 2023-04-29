@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.idr		set filetype=idris2
+au BufRead,BufNewFile *.idr set filetype=idris2

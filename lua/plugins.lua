@@ -3,12 +3,6 @@ return require("packer").startup(function()
   -- LSP --
   ---------
 
-  -- idris2
-  use {
-    'ShinKage/idris2-nvim',
-    requires = { 'neovim/nvim-lspconfig', 'MunifTanjim/nui.nvim' }
-  }
-
   -- syntax highlight
   use { 'nvim-treesitter/nvim-treesitter',
     run = function()
@@ -46,10 +40,13 @@ return require("packer").startup(function()
       require("copilot_cmp").setup()
     end
   }
-  use { "quangnguyen30192/cmp-nvim-ultisnips", after = { "nvim-cmp", "ultisnips" }, config =
-  [[require('cmp-ultisnips-conf')]] }
+  use {
+    "quangnguyen30192/cmp-nvim-ultisnips",
+    after = { "nvim-cmp", "ultisnips" },
+    config = [[require('cmp-ultisnips-conf')]]
+  }
 
-  -- copilot
+  -- copilot completion source
   use {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
@@ -57,7 +54,7 @@ return require("packer").startup(function()
     config = [[require('copilot-conf')]]
   }
 
-  -- signature helper
+  -- neovim plugin developing lsp support
   use 'folke/neodev.nvim'
 
   ----------
@@ -95,14 +92,8 @@ return require("packer").startup(function()
   -- automatic insertion and deletion of a pair of characters
   use { "Raimondi/delimitMate", event = "InsertEnter" }
 
-  -- fcitx
+  -- fcitx optimization
   use 'lilydjwg/fcitx.vim'
-
-  -- better yanking
-  use({
-    "gbprod/yanky.nvim",
-    config = [[require('yanky-conf')]]
-  })
 
   ----------
   -- FILE --
@@ -168,12 +159,15 @@ return require("packer").startup(function()
   -- snippet
   use("SirVer/ultisnips")
 
-  -- latex preview
+  -- latex conceal
   use("KeitaNakamura/tex-conceal.vim")
 
   -----------
   -- INTEL --
   -----------
+
+  -- git diff
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   -- git blame
   use 'f-person/git-blame.nvim'
