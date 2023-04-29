@@ -104,6 +104,7 @@ return require("packer").startup(function()
   -- better yanking
   use({
     "gbprod/yanky.nvim",
+    config = [[require('yanky-conf')]]
   })
 
   ----------
