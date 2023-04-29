@@ -1,4 +1,4 @@
-require('idris2-nvim').setup({})
+require('idris2').setup({})
 local bufopts = { noremap = true }
 vim.keymap.set('n', '<leader>e', ':lua require("idris2.repl").evaluate()<CR>', bufopts)
 vim.keymap.set('n', '<leader>cs', ':lua require("idris2.code_action").case_split()<CR>', bufopts)

@@ -4,7 +4,10 @@ vim.keymap.set('n', '<Space>a', require("telescope").extensions.aerial.aerial, {
 vim.keymap.set('n', '<Space>g', builtin.live_grep, {})
 vim.keymap.set('n', '<Space>b', builtin.buffers, {})
 vim.keymap.set('n', '<Space>h', builtin.help_tags, {})
-require('telescope').setup({
+local telescope = require 'telescope'
+telescope.load_extension('env')
+telescope.load_extension('ui-select')
+telescope.setup({
   pickers = {
     find_files = {
       hidden = true,
