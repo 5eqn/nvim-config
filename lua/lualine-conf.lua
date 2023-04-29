@@ -21,7 +21,7 @@ require('lualine').setup {
     lualine_a = { 'mode' },
     lualine_b = { 'branch', 'diff' },
     lualine_c = { 'diagnostics', 'filename' },
-    lualine_x = { '%{coc#status()}', 'progress' },
+    lualine_x = { 'progress' },
     lualine_y = { {
       "aerial",
       sep = '',

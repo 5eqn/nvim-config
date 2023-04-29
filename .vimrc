@@ -14,16 +14,16 @@ hi CocInlayHint ctermfg=DarkGray ctermbg=none
 hi NormalFloat guibg=DarkGray guifg=none
 
 " Color Scheme
-hi CocSemEnumMember ctermfg=LightBlue
-hi CocSemClass ctermfg=121
-hi CocSemModule ctermfg=121
-hi CocSemPostulate ctermfg=Blue
-hi Comment cterm=italic ctermfg=DarkGray
-hi Keyword ctermfg=Blue
-hi Statement ctermfg=Blue
-hi String ctermfg=DarkGreen
-hi Function cterm=none
-hi Identifier cterm=none ctermfg=Gray
+" hi CocSemEnumMember ctermfg=LightBlue
+" hi CocSemClass ctermfg=121
+" hi CocSemModule ctermfg=121
+" hi CocSemPostulate ctermfg=Blue
+" hi Comment cterm=italic ctermfg=DarkGray
+" hi Keyword ctermfg=Blue
+" hi Statement ctermfg=Blue
+" hi String ctermfg=DarkGreen
+" hi Function cterm=none
+" hi Identifier cterm=none ctermfg=Gray
 
 set relativenumber
 set number
@@ -79,10 +79,6 @@ let g:vim_markdown_math = 1
 let g:UltiSnipsExpandTrigger = '<F1>'
 let g:UltiSnipsJumpForwardTrigger = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<F3>'
-
-" Copilot
-imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
-let g:copilot_no_tab_map = v:true
 
 " Convenient commands
 nnoremap <C-w><C-y> <C-w><C-w>vG$y<C-w><C-w>
