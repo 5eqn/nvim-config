@@ -49,6 +49,14 @@ return require("packer").startup(function()
   use { "quangnguyen30192/cmp-nvim-ultisnips", after = { "nvim-cmp", "ultisnips" }, config =
   [[require('cmp-ultisnips-conf')]] }
 
+  -- copilot
+  use {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = [[require('copilot-conf')]]
+  }
+
   -- signature helper
   use 'folke/neodev.nvim'
 
@@ -83,14 +91,6 @@ return require("packer").startup(function()
 
   -- unicode typing
   use { "chrisbra/unicode.vim", event = "VimEnter" }
-
-  -- auto complete
-  use {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = [[require('copilot-conf')]]
-  }
 
   -- automatic insertion and deletion of a pair of characters
   use { "Raimondi/delimitMate", event = "InsertEnter" }
@@ -214,7 +214,7 @@ return require("packer").startup(function()
   -- MISC --
   ----------
 
-  -- starup time optimise
+  -- startup time optimise
   use 'dstein64/vim-startuptime'
   use {
     'lewis6991/impatient.nvim',
