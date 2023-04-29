@@ -12,10 +12,16 @@ hi LineNrAbove ctermfg=DarkGray
 hi LineNrBelow ctermfg=DarkGray
 hi CocInlayHint ctermfg=DarkGray ctermbg=none
 hi NormalFloat guibg=DarkGray guifg=none
-hi Comment cterm=italic ctermfg=DarkGreen
+
+" Color Scheme
 hi CocSemEnumMember ctermfg=LightBlue
-hi COcSemClass ctermfg=121
-hi Keyword cterm=none ctermfg=Yellow
+hi CocSemClass ctermfg=121
+hi CocSemModule ctermfg=121
+hi CocSemPostulate ctermfg=Blue
+hi Comment cterm=italic ctermfg=DarkGray
+hi Keyword ctermfg=Blue
+hi Statement ctermfg=Blue
+hi String ctermfg=DarkGreen
 hi Function cterm=none
 hi Identifier cterm=none ctermfg=Gray
 
@@ -93,6 +99,9 @@ tnoremap <C-]> <C-\><C-N>:q<CR>
 
 " Markdown Preview
 nnoremap <C-s> <Plug>MarkdownPreview
+
+" Select all
+nnoremap <C-a> 0ggvG
 
 " nmap <silent> <C-c> <Plug>(coc-cursors-position)
 " nmap <silent> <C-d> <Plug>(coc-cursors-word)

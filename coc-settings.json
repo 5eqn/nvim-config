@@ -1,4 +1,6 @@
 {
+  "codeLens.enable": true,
+  "codeLens.position": "top",
   "semanticTokens.enable": true,
   "Lua.telemetry.enable": true,
   "Lua.diagnostics.globals": ["use"],
@@ -13,7 +15,7 @@
   "java.import.gradle.java.home": "/usr/lib/jvm/java-11-openjdk",
   "languageserver": {
     "idris": {
-      "command": "idris2-lsp",
+      "command": "~/idr/idris2-lsp/build/exec/idris2-lsp",
       "rootPatterns": ["*.ipkg"],
       "filetypes": ["idris2"]
     },

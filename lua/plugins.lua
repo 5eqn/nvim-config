@@ -2,6 +2,13 @@ return require("packer").startup(function()
   -- git blame
   use 'f-person/git-blame.nvim'
 
+  -- keymap preview
+  use {
+    "folke/which-key.nvim",
+    event = "VimEnter",
+    config = [[require('plugin_conf.which-key_conf')]],
+  }
+
   -- fcitx
   use 'lilydjwg/fcitx.vim'
 
