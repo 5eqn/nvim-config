@@ -65,6 +65,13 @@ lsp.ltex.setup {
 }
 lsp.lua_ls.setup {
   capabilities = cmp_capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim', 'use' }
+      }
+    }
+  },
   on_attach = lsp_on_attach
 }
 lsp.sqlls.setup {
@@ -112,12 +119,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
     vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    vim.keymap.set('n', '<space>p', function()
-      vim.lsp.buf.format { async = true }
-    end, opts)
   end,
-})
-require("neodev").setup({
-  -- TODO add debug plugin
-  -- library = { plugins = { "nvim-dap-ui" }, types = true },
 })
