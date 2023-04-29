@@ -56,9 +56,6 @@ return require("packer").startup(function()
   -- EDIT --
   ----------
 
-  -- better escape
-  use { "nvim-zh/better-escape.vim", event = { "InsertEnter" } }
-
   -- better movement
   use {
     'ggandor/leap.nvim',
