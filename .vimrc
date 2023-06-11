@@ -47,6 +47,10 @@ au FileType java set shiftwidth=4
 au FileType java set tabstop=4
 au FileType java set softtabstop=4
 
+" Copilot
+imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
 " Fcitx
 let g:fcitx5_remote='fcitx5-remote'
 
