@@ -34,25 +34,13 @@ return require("packer").startup(function()
   use { "hrsh7th/cmp-buffer", after = "nvim-cmp" }
   use { "hrsh7th/cmp-omni", after = "nvim-cmp" }
   use {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end
-  }
-  use {
     "quangnguyen30192/cmp-nvim-ultisnips",
     after = { "nvim-cmp", "ultisnips" },
     config = [[require('cmp-ultisnips-conf')]]
   }
 
-  -- copilot completion source
-  use {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = [[require('copilot-conf')]]
-  }
+  -- auto complete
+  use("github/copilot.vim")
 
   -- neovim plugin developing lsp support
   use 'folke/neodev.nvim'
@@ -89,11 +77,15 @@ return require("packer").startup(function()
   -- unicode typing
   use { "chrisbra/unicode.vim", event = "VimEnter" }
 
-  -- automatic insertion and deletion of a pair of characters
-  use { "Raimondi/delimitMate", event = "InsertEnter" }
-
   -- fcitx optimization
   use 'lilydjwg/fcitx.vim'
+
+  -- global find and replace
+  use {
+    'nvim-pack/nvim-spectre',
+    requires = 'nvim-lua/plenary.nvim',
+    config = [[require('spectre-conf')]]
+  }
 
   ----------
   -- FILE --
@@ -171,13 +163,6 @@ return require("packer").startup(function()
 
   -- git blame
   use 'f-person/git-blame.nvim'
-
-  -- keymap preview
-  use {
-    "folke/which-key.nvim",
-    event = "VimEnter",
-    config = [[require('which-key-conf')]],
-  }
 
   -- code outline
   use {

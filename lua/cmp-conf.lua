@@ -5,14 +5,7 @@ notify.setup({
   timeout = 1000,
   stages = "fade",
 })
-lspkind.init({
-  symbol_map = {
-    Copilot = "",
-  },
-})
-vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 cmp.setup {
-
   snippet = {
     expand = function(args)
       -- For `ultisnips` user.
@@ -20,38 +13,38 @@ cmp.setup {
     end,
   },
   mapping = cmp.mapping {
-    ["<Tab>"] = function(fallback)
+    ["<C-j>"] = function(fallback)
       if cmp.visible() then
         cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
       else
         fallback()
       end
     end,
-    ["<S-Tab>"] = function(fallback)
+    ["<C-k>"] = function(fallback)
       if cmp.visible() then
         cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
       else
         fallback()
       end
     end,
-    ["<C-Space>"] = cmp.mapping.complete({
-      config = {
-        sources = {
-          { name = "copilot" },
-          { name = "nvim_lsp" },  -- For nvim-lsp
-          { name = "ultisnips" }, -- For ultisnips user.
-          { name = "path" },
-        }
-      }
-    }),
+    -- ["<C-Space>"] = cmp.mapping.complete({
+    --   config = {
+    --     sources = {
+    --       { name = "copilot" },
+    --       { name = "nvim_lsp" },  -- For nvim-lsp
+    --       { name = "ultisnips" }, -- For ultisnips user.
+    --       { name = "path" },
+    --     }
+    --   }
+    -- }),
     -- ["<C-e>"] = cmp.mapping.complete({
     -- 	config = {
     -- 		sources = {
     -- 			{ name = "emoji", insert = true }
     -- 		}
     -- 	} }),
-    -- ["<CR>"] = cmp.mapping.confirm { behavior=cmp.ConfirmBehavior.Replace },
-    ['<CR>'] = function(fallback)
+    -- ["<C-l>"] = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Replace },
+    ['<C-l>'] = function(fallback)
       if cmp.get_selected_entry() then
         -- if cmp.visible() then
         cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace })
@@ -65,7 +58,6 @@ cmp.setup {
     ["<C-u>"] = cmp.mapping.scroll_docs(4),
   },
   sources = {
-    { name = "copilot" },
     { name = "nvim_lsp" },                     -- For nvim-lsp
     { name = "ultisnips" },                    -- For ultisnips user.
     { name = "path" },                         -- for path completion
@@ -87,7 +79,6 @@ cmp.setup {
       ellipsis_char = "…",
       menu = {
         nvim_lsp = "[LSP]",
-        coplilot = "[Copilot]",
         ultisnips = "[Ulti]",
         nvim_lua = "[Lua]",
         path = "[Path]",
@@ -107,22 +98,6 @@ end)
 cmp.event:on("menu_closed", function()
   vim.b.copilot_suggestion_hidden = false
 end)
-
-vim.keymap.set({ 'i', 'n', 'v' }, '<C-s>', function()
-  require("copilot.suggestion").toggle_auto_trigger()
-  print("Auto_trigger_status:", vim.b.copilot_suggestion_auto_trigger)
-  require('notify')(
-    vim.b.copilot_suggestion_auto_trigger and "Auto trigger enabled" or "Auto trigger disabled",
-    "info",
-    {
-      title = "Copilot",
-      timeout = 100,
-    })
-end)
-vim.keymap.set({ 'i', 'n', 'v' }, '<C-f>',
-  function() notify(vim.b.copilot_suggestion_hidden and "True" or "False") end)
-
-vim.keymap.set({ 'i', 'n', 'v' }, '<C-p>', function() require("copilot.panel").open {} end)
 
 -- The following part is set in lsp_conf
 --[[ -- Set up lspconfig.

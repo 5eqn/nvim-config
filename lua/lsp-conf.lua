@@ -10,6 +10,14 @@ end
 local cmp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lsp = require 'lspconfig'
 
+lsp.dartls.setup {
+  capabilities = cmp_capabilities,
+  on_attach = lsp_on_attach
+}
+lsp.bufls.setup {
+  capabilities = cmp_capabilities,
+  on_attach = lsp_on_attach
+}
 lsp.pylsp.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach
@@ -24,6 +32,7 @@ lsp.rust_analyzer.setup {
 }
 lsp.clangd.setup {
   capabilities = cmp_capabilities,
+  filetypes = { "c", "cpp", "h" },
   on_attach = lsp_on_attach
 }
 lsp.cmake.setup {
@@ -33,7 +42,7 @@ lsp.cmake.setup {
 lsp.idris2_lsp.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach,
-  cmd = {"idris2-lsp"}
+  cmd = { "idris2-lsp" }
 }
 lsp.cssls.setup {
   capabilities = cmp_capabilities,
@@ -67,10 +76,6 @@ lsp.kotlin_language_server.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach
 }
-lsp.ltex.setup {
-  capabilities = cmp_capabilities,
-  on_attach = lsp_on_attach
-}
 lsp.lua_ls.setup {
   capabilities = cmp_capabilities,
   settings = {
@@ -87,10 +92,6 @@ lsp.sqlls.setup {
   on_attach = lsp_on_attach
 }
 lsp.vimls.setup {
-  capabilities = cmp_capabilities,
-  on_attach = lsp_on_attach
-}
-lsp.yamlls.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach
 }

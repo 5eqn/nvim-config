@@ -8,6 +8,7 @@ require('code_runner').setup({
     python = "python3 -u",
     typescript = "deno run",
     rust = "cargo run",
-    cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt"
+    cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
+    go = "cd $dir && go run $fileName",
   },
 })
