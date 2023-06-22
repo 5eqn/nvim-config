@@ -14,6 +14,14 @@ lsp.dartls.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach
 }
+lsp.volar.setup {
+  capabilities = cmp_capabilities,
+  on_attach = lsp_on_attach
+}
+lsp.tsserver.setup {
+  capabilities = cmp_capabilities,
+  on_attach = lsp_on_attach
+}
 lsp.bufls.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach

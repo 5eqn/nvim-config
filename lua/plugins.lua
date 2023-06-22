@@ -95,10 +95,10 @@ return require("packer").startup(function()
   use 'nvim-tree/nvim-web-devicons'
 
   -- netrw replacement
-  use {
-    '~/web/oil.nvim',
-    config = function() require('oil').setup() end
-  }
+  -- use {
+  --   '~/web/oil.nvim',
+  --   config = function() require('oil').setup() end
+  -- }
 
   -- file tree
   use {
