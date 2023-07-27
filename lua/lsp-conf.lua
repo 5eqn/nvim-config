@@ -72,6 +72,10 @@ lsp.html.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach
 }
+lsp.hls.setup {
+  capabilities = cmp_capabilities,
+  on_attach = lsp_on_attach
+}
 lsp.jdtls.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach
@@ -102,6 +106,12 @@ lsp.sqlls.setup {
 lsp.vimls.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach
+}
+lsp.typst_lsp.setup {
+  settings = {
+    exportPdf = "onType" -- Choose onType, onSave or never.
+    -- serverPath = "" -- Normally, there is no need to uncomment it.
+  }
 }
 
 -- Global mappings.
