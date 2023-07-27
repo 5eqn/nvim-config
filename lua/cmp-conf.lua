@@ -27,23 +27,6 @@ cmp.setup {
         fallback()
       end
     end,
-    -- ["<C-Space>"] = cmp.mapping.complete({
-    --   config = {
-    --     sources = {
-    --       { name = "copilot" },
-    --       { name = "nvim_lsp" },  -- For nvim-lsp
-    --       { name = "ultisnips" }, -- For ultisnips user.
-    --       { name = "path" },
-    --     }
-    --   }
-    -- }),
-    -- ["<C-e>"] = cmp.mapping.complete({
-    -- 	config = {
-    -- 		sources = {
-    -- 			{ name = "emoji", insert = true }
-    -- 		}
-    -- 	} }),
-    -- ["<C-l>"] = cmp.mapping.confirm { behavior = cmp.ConfirmBehavior.Replace },
     ['<C-l>'] = function(fallback)
       if cmp.get_selected_entry() then
         -- if cmp.visible() then
@@ -58,6 +41,7 @@ cmp.setup {
     ["<C-u>"] = cmp.mapping.scroll_docs(4),
   },
   sources = {
+    { name = "copilot" },
     { name = "nvim_lsp" },                     -- For nvim-lsp
     { name = "ultisnips" },                    -- For ultisnips user.
     { name = "path" },                         -- for path completion
@@ -76,16 +60,8 @@ cmp.setup {
     format = lspkind.cmp_format {
       mode = "symbol_text",
       maxwidth = 50,
+      symbol_map = { Copilot = "" },
       ellipsis_char = "…",
-      menu = {
-        nvim_lsp = "[LSP]",
-        ultisnips = "[Ulti]",
-        nvim_lua = "[Lua]",
-        path = "[Path]",
-        buffer = "[Buffer]",
-        emoji = "[Emoji]",
-        omni = "[Omni]",
-      },
     },
   },
   experimental = { ghost_text = true, },

@@ -10,5 +10,6 @@ require('code_runner').setup({
     rust = "cargo run",
     cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
     go = "cd $dir && go run $fileName",
+    typst = "typst compile $fileName && zathura $fileNameWithoutExt.pdf & typst watch $fileName",
   },
 })

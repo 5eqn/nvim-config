@@ -4,13 +4,16 @@ return require("packer").startup(function()
   ---------
 
   -- syntax highlight
-  use { 'nvim-treesitter/nvim-treesitter',
-    run = function()
-      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-      ts_update()
-    end,
-    config = [[require('treesitter-conf')]]
-  }
+  -- use { 'nvim-treesitter/nvim-treesitter',
+  --   run = function()
+  --     local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+  --     ts_update()
+  --   end,
+  --   config = [[require('treesitter-conf')]]
+  -- }
+
+  -- typst
+  use { 'kaarmu/typst.vim', ft = { 'typst' } }
 
   -- language server
   use { "williamboman/mason.nvim",
@@ -40,7 +43,19 @@ return require("packer").startup(function()
   }
 
   -- auto complete
-  use("github/copilot.vim")
+  use {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = [[require('copilot-conf')]]
+  }
+  use {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end
+  }
 
   -- neovim plugin developing lsp support
   use 'folke/neodev.nvim'
@@ -157,6 +172,11 @@ return require("packer").startup(function()
   -----------
   -- INTEL --
   -----------
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    config = [[require('treesitter-conf')]]
+  }
 
   -- git diff
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }

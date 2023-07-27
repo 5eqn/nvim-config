@@ -41,16 +41,9 @@ set signcolumn=no
 
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType * nnoremap <Space>r :RunCode<CR>
-au FileType java set shiftwidth=4
-au FileType java set tabstop=4
-au FileType java set softtabstop=4
 
 " Markdown Upload
 nnoremap <space>u :execute '!md-upload -in ' . expand('%:p') . ' -url http://10.249.45.98:114/articles'<CR>
-
-" Copilot
-imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
-let g:copilot_no_tab_map = v:true
 
 " Fcitx
 let g:fcitx5_remote='fcitx5-remote'
