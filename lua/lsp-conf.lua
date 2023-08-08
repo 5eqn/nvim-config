@@ -103,6 +103,10 @@ lsp.sqlls.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach
 }
+lsp.metals.setup {
+  capabilities = cmp_capabilities,
+  on_attach = lsp_on_attach
+}
 lsp.vimls.setup {
   capabilities = cmp_capabilities,
   on_attach = lsp_on_attach

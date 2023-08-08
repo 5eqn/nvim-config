@@ -41,7 +41,7 @@ cmp.setup {
     ["<C-u>"] = cmp.mapping.scroll_docs(4),
   },
   sources = {
-    { name = "copilot" },
+    -- { name = "copilot" },
     { name = "nvim_lsp" },                     -- For nvim-lsp
     { name = "ultisnips" },                    -- For ultisnips user.
     { name = "path" },                         -- for path completion
@@ -60,20 +60,20 @@ cmp.setup {
     format = lspkind.cmp_format {
       mode = "symbol_text",
       maxwidth = 50,
-      symbol_map = { Copilot = "" },
+      -- symbol_map = { Copilot = "" },
       ellipsis_char = "…",
     },
   },
   experimental = { ghost_text = true, },
 }
 
-cmp.event:on("menu_opened", function()
-  vim.b.copilot_suggestion_hidden = true
-end)
-
-cmp.event:on("menu_closed", function()
-  vim.b.copilot_suggestion_hidden = false
-end)
+-- cmp.event:on("menu_opened", function()
+--   vim.b.copilot_suggestion_hidden = true
+-- end)
+--
+-- cmp.event:on("menu_closed", function()
+--   vim.b.copilot_suggestion_hidden = false
+-- end)
 
 -- The following part is set in lsp_conf
 --[[ -- Set up lspconfig.

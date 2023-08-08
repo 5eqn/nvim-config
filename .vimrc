@@ -42,6 +42,10 @@ set signcolumn=no
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType * nnoremap <Space>r :RunCode<CR>
 
+" Copilot
+imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
 " Markdown Upload
 nnoremap <space>u :execute '!md-upload -in ' . expand('%:p') . ' -url http://10.249.45.98:114/articles'<CR>
 
