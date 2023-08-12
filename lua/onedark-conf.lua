@@ -1,10 +1,16 @@
 require('onedark').setup {
-  colors = {
-    bg_d = "#232326"
-  },
+  style = 'light',
+  transparent = true,
   highlights = {
-    FloatBorder = { bg = "#232326" }
+    -- Conceal = { bg = "#00000000" },
+    -- TabLineFill = { bg = "#00000000" },
+    -- MiniTablineFill = { bg = "#00000000" },
+    -- MiniStatuslineFilename = { bg = "#00000000" },
+    -- StatusLineTermNC = { bg = "#00000000" },
+    -- DiffviewStatusLineNC = { bg = "#00000000" },
+    -- StatusLineNC = { bg = "#00000000" },
+    FloatBorder = { fg = "#F1F1F1" },
+    -- NormalFloat = { bg = "#00000000" },
   },
-  style = 'warmer'
 }
 require('onedark').load()

@@ -74,7 +74,7 @@ lsp.html.setup {
 }
 lsp.hls.setup {
   capabilities = cmp_capabilities,
-  on_attach = lsp_on_attach
+  on_attach = lsp_on_attach,
 }
 lsp.jdtls.setup {
   capabilities = cmp_capabilities,

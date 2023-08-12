@@ -192,6 +192,11 @@ return require("packer").startup(function()
     'navarasu/onedark.nvim',
     config = [[require('onedark-conf')]]
   }
+  -- use {
+  --   'Mofiqul/vscode.nvim',
+  --   config = [[require('color-theme-conf')]]
+  -- }
+  -- use 'rakr/vim-one'
 
   -- status line
   use {
