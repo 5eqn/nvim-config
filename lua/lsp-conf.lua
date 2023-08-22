@@ -74,6 +74,18 @@ lsp.html.setup {
 }
 lsp.hls.setup {
   capabilities = cmp_capabilities,
+  settings = {
+    haskell = {
+      plugin = {
+        hlint = {
+          globalOn = false
+        },
+        stan = {
+          globalOn = false
+        }
+      }
+    }
+  },
   on_attach = lsp_on_attach,
 }
 lsp.jdtls.setup {
