@@ -41,21 +41,6 @@ return require("packer").startup(function()
     config = [[require('cmp-ultisnips-conf')]]
   }
 
-  -- auto complete
-  -- use {
-  --   "zbirenbaum/copilot.lua",
-  --   cmd = "Copilot",
-  --   event = "InsertEnter",
-  --   config = [[require('copilot-conf')]]
-  -- }
-  -- use {
-  --   "zbirenbaum/copilot-cmp",
-  --   after = { "copilot.lua" },
-  --   config = function()
-  --     require("copilot_cmp").setup()
-  --   end
-  -- }
-
   -- neovim plugin developing lsp support
   use 'folke/neodev.nvim'
 
@@ -64,7 +49,7 @@ return require("packer").startup(function()
   ----------
 
   -- auto complete
-  use("github/copilot.vim")
+  -- use("github/copilot.vim")
 
   -- better movement
   use {
