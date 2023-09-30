@@ -46,8 +46,13 @@ au FileType * nnoremap <Space>r :RunCode<CR>
 " imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
 " let g:copilot_no_tab_map = v:true
 
-" Markdown Upload
-nnoremap <space>u :execute '!md-upload -in ' . expand('%:p') . ' -url http://10.249.45.98:114/articles'<CR>
+" Markdown
+" nnoremap <space>u :execute '!md-upload -in ' . expand('%:p') . ' -url http://10.249.45.98:114/articles'<CR>
+let g:markdown_recommended_style = 0
+" let g:vim_markdown_folding_disabled = 1
+" let g:vim_markdown_math = 1
+" let g:vim_markdown_new_list_item_indent = 2
+" nnoremap <C-s> <Plug>MarkdownPreview
 
 " Fcitx
 let g:fcitx5_remote='fcitx5-remote'
@@ -75,10 +80,6 @@ let g:vimtex_mappings_disable = {
       \ 'i': [']]'],
       \}
 
-" Vim Markdown
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_math = 1
-
 " UltiSnips
 let g:UltiSnipsExpandTrigger = '<F1>'
 let g:UltiSnipsJumpForwardTrigger = '<Tab>'
@@ -95,9 +96,6 @@ nnoremap <Space>f :Neotree float toggle<Enter>
 " Terminal commands
 tnoremap <C-[> <C-\><C-N>
 tnoremap <C-]> <C-\><C-N>:q<CR>
-
-" Markdown Preview
-nnoremap <C-s> <Plug>MarkdownPreview
 
 " Select all
 nnoremap <C-a> 0ggvG$
