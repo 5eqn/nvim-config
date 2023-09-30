@@ -8,7 +8,7 @@ require('code_runner').setup({
     python = "python3 -u",
     typescript = "deno run",
     rust = "cargo run",
-    cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
+    cpp = "cd $dir && g++ $fileName -o $fileNameWithoutExt_bin && $dir/$fileNameWithoutExt_bin",
     go = "cd $dir && go run $fileName",
     typst = "typst compile $fileName && zathura $fileNameWithoutExt.pdf & typst watch $fileName",
     scala = "scala3 $dir/$fileName",
