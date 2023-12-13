@@ -149,7 +149,7 @@ return require("packer").startup(function()
 
   -- note manager
   use {
-    '~/web/nothura.nvim',
+    '5eqn/nothura.nvim',
     requires = 'stevearc/aerial.nvim',
     config = [[require('nothura-conf')]]
   }
