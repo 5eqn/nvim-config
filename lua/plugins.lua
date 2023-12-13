@@ -80,7 +80,7 @@ return require("packer").startup(function()
   use { "chrisbra/unicode.vim", event = "VimEnter" }
 
   -- fcitx optimization
-  use 'lilydjwg/fcitx.vim'
+  -- use 'lilydjwg/fcitx.vim'
 
   -- global find and replace
   use {
@@ -93,14 +93,21 @@ return require("packer").startup(function()
   -- FILE --
   ----------
 
-  -- file icon
-  use 'nvim-tree/nvim-web-devicons'
-
   -- netrw replacement
   -- use {
   --   '~/web/oil.nvim',
   --   config = function() require('oil').setup() end
   -- }
+
+  -- file lsp sync
+  use {
+    'antosha417/nvim-lsp-file-operations',
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-neo-tree/neo-tree.nvim",
+    },
+    config = [[require('file-lsp-conf')]]
+  }
 
   -- file tree
   use {
@@ -116,7 +123,7 @@ return require("packer").startup(function()
 
   -- file finder
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim',
     -- or                            , branch = '0.1.x',
     requires = {
       { 'nvim-lua/popup.nvim',                      'LinArcX/telescope-env.nvim' },
