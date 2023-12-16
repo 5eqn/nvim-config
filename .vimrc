@@ -101,7 +101,7 @@ tnoremap <C-]> <C-\><C-N>:q<CR>
 nnoremap <C-a> 0ggvG$
 
 " Exit edit mode
-inoremap <C-s> <Esc>:w<Enter>
+inoremap <C-s> <Esc>
 
 " nmap <silent> <C-c> <Plug>(coc-cursors-position)
 " nmap <silent> <C-d> <Plug>(coc-cursors-word)
