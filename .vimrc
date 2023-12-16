@@ -100,6 +100,9 @@ tnoremap <C-]> <C-\><C-N>:q<CR>
 " Select all
 nnoremap <C-a> 0ggvG$
 
+" Exit edit mode
+inoremap <C-s> <Esc>:w<Enter>
+
 " nmap <silent> <C-c> <Plug>(coc-cursors-position)
 " nmap <silent> <C-d> <Plug>(coc-cursors-word)
 " xmap <silent> <C-d> <Plug>(coc-cursors-range)
