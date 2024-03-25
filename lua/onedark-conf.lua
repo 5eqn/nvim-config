@@ -1,3 +1,4 @@
+vim.o.background = 'light'
 require('onedark').setup {
   style = 'light',
   transparent = true,

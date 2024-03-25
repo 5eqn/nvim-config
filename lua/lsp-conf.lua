@@ -15,7 +15,13 @@ lsp.dartls.setup {
   on_attach = lsp_on_attach
 }
 lsp.volar.setup {
-  capabilities = cmp_capabilities,
+  capabilities = {
+    workspace = {
+      didChangeWatchedFiles = {
+        dynamicRegistration = true,
+      },
+    },
+  },
   on_attach = lsp_on_attach
 }
 lsp.tsserver.setup {
@@ -36,7 +42,7 @@ lsp.bashls.setup {
 }
 lsp.rust_analyzer.setup {
   capabilities = cmp_capabilities,
-  on_attach = lsp_on_attach
+  on_attach = lsp_on_attach,
 }
 lsp.clangd.setup {
   capabilities = cmp_capabilities,

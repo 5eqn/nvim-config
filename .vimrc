@@ -42,6 +42,22 @@ set signcolumn=no
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType * nnoremap <Space>r :RunCode<CR>
 
+" Clipboard
+if $DISPLAY == ''
+  let g:clipboard = {
+        \   'name': 'termuxClip',
+        \   'copy': {
+        \      '+': ['termux-clip-setter'],
+        \      '*': ['termux-clip-setter'],
+        \    },
+        \   'paste': {
+        \      '+': ['termux-clip-getter'],
+        \      '*': ['termux-clip-getter'],
+        \   },
+        \   'cache_enabled': 1,
+        \ }
+endif
+
 " Copilot
 " imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
 " let g:copilot_no_tab_map = v:true
