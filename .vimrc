@@ -26,6 +26,7 @@ hi Conceal ctermbg=none
 " hi Identifier cterm=none ctermfg=Gray
 
 set relativenumber
+set termguicolors
 set number
 set shiftwidth=2
 set tabstop=2
