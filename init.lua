@@ -13,5 +13,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("filetype")
-require("plugins")
 require('vimrc')
+require("plugins")
